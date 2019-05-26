@@ -1,0 +1,637 @@
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider_switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider_switch:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider_switch {
+  background-color: #cc0000;
+}
+
+input:focus + .slider_switch {
+  box-shadow: 0 0 1px #cc0000;
+}
+
+input:checked + .slider_switch:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slidecontainer
+{
+    position: relative;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #bb0000; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+/*************************************/
+.scc_select
+{
+    background: #cc0000;
+    color: #fff;
+     font-size: 20px;
+
+}
+.scc_select option
+{
+    background: #fff;
+    color: #000;
+    border: 1px solid #0a0;
+  text-indent: 5px;
+  padding: 5px;
+}
+
+ul.customComboBox {
+
+   display: block;
+   color: #000;
+   list-style-type: none;
+}
+
+ul.customComboBox li
+{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: normal;
+}
+ul.customComboBox li:nth-child(odd) {
+    color: #000;
+    background: #ddd;
+}
+ul.customComboBox li:nth-child(even)
+{
+    background: #fff;
+    color: #333;
+}
+ul.customComboBox li.activated
+{
+    background: #cc0000;
+    color: #fff;
+}
+
+.slider-handle {
+  position: absolute;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  background-color: #337ab7;
+  background-image: -webkit-linear-gradient(top, #cc0000 0%, #aa0000 100%);
+  background-image: -o-linear-gradient(top, #cc0000 0%, #aa0000 100%);
+  background-image: linear-gradient(to bottom, #cc0000 0%, #aa0000 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc0000', endColorstr='#aa0000', GradientType=0);
+  filter: none;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  border: 0px solid transparent;
+}
+
+.btnn {
+    background-color: transparent;
+    border: none;
+    color: #314af3;
+    cursor: pointer;
+    float: right;
+    /* font-size:15px; */
+    padding: 1px 2px;
+   margin: 3px -3.5px -12px 2.5px;
+   /* width: 5%; */
+}
+/* Darker background on mouse-over */
+.btnn:hover {
+    background-color: RoyalBlue;
+}
+/*ul:first-child li:nth-child(2) i.up {
+  display: none;
+}*/
+.price_table {
+    width: 100%;
+   /* border-collapse:collapse;*/
+    margin: auto;
+    background-color: #A4A4A4;
+/*    border: 2px solid black;*/
+    table-layout: auto;
+    /* border-spacing: 0.5rem; */
+}
+.scc_td, .scc_th {
+    text-align: center;
+    font-weight: normal;
+ /*   border: 2px solid green;*/
+}
+.scc_td .scc_input {
+    width: 100%;
+        text-align: center;
+    box-sizing: border-box;
+}
+.scc_caption {
+    font-weight: bolder;
+    display: table-caption;
+    text-align: center;
+}
+.mandatory  {
+  color:  #314af3;
+  font-size:18px;
+  width: 10;
+}
+.BodyOption {
+  margin-left:12px;
+}
+/* @media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  } */
+.calc_bar {
+    width: 95%;
+    max-width:900px;
+    margin-left: 17px;
+  }
+  .addedFieldsStyle {
+    background-color: #ffffff;
+    width: 95%;
+    max-width: 900px;
+    /* background: #D3D3D3; */
+    /* padding: 10px; */
+    /* box-shadow: 0px 2px #888888; */
+    margin-bottom: 10px;
+    /* border: 2px solid #5f535305; */
+    border-radius: 13px;
+    /* border-style: outset; */
+    /* max-width: 400px; */
+    height: auto;
+    overflow: -webkit-paged-y;
+  }
+  .fieldDatatoAdd {
+    /* background-color:#F1F1F1; */
+    width: 95%;
+    /* text-align: center;
+    min-height: 3em; */
+    margin: 10px;
+  }
+  #allinputstoadd {
+    width: 90%;
+    max-width: 900px;
+    padding-left: 22px;
+    height: auto;
+  }
+  #allinputstoadd1 {
+    width: 90%;
+    padding-left: 22px;
+  }
+  .titleinputoption {
+    width: 40%;
+    min-width:150px;
+    /* border-radius: 8px;
+    height: 33px; */
+  }
+  .form-line,
+.form-line.form-line-column {
+  /* padding: 3% 5%; */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style-type: none;
+  background-color: #F8F8F8;
+    padding-bottom: 30px;
+}
+.boardOption {
+  width: 47%;
+    float: left;
+    margin: 10px;
+    align-items: center;
+    min-height: 200px;
+    text-align: center;
+    overflow-wrap: normal;
+    border: 3px solid #E8E8E8;
+}
+.boardOption1{
+  width: 47%;
+  background: #F0F0F0;
+  float: left;
+  margin: 10px;
+  align-items: center;
+  display: flex;
+  height: 200px;
+  text-align: center;
+  border: 3px solid #E8E8E8;
+}
+#title54-bar {
+    -webkit-app-region: drag;
+    height: 60px;
+    text-align: center;
+    line-height: 28px;
+    vertical-align: middle;
+    /* background-color: #E7E7E7; */
+    padding: none;
+    /* margin: 2px; */
+}
+#title54 {
+    position: relative;
+    top: 0px;
+    left: 10%;
+    float: left;
+    /* color:white; */
+
+}
+#title54-bar-btns {
+    -webkit-app-region: no-drag;
+    position: relative;
+    /* float: right; */
+    top: 3px;
+    right: 6px;
+}
+
+
+.btSeparator {
+    clear: both;
+}
+
+.btClear {
+    clear: both;
+}
+.bottomSmallSpaced {
+    padding-bottom: 1em;
+}
+.topSmallSpaced {
+  padding-top: 0.5em;
+background: black;
+}
+.collapsible {
+  background-color: transparent;
+  /* color: white; */
+  /* cursor: pointer; */
+  padding: 11px;
+  width: 77%;
+  border: none;
+  text-align: left;
+  /* outline: none; */
+  font-size: 15px;
+  display: inline-block;
+  /* margin-left: -7px; */
+  /* margin-bottom: 6px; */
+}
+.content {
+  /* border-radius: 5px; */
+  /* border-style: solid;
+  border-width: thin;
+  border-top: none;
+  border-color: black;
+  /* margin-top: -8px; */
+  /* margin-bottom: 6px; */
+  /* margin: -18px 7px 5px -6px; */ */
+}
+
+.slider-horizontal .slider-track {
+    height: 8px;
+    width: 100%;
+    margin-top: -5px;
+    top: 50%;
+    left: 0;
+}
+
+/* Popup box BEGIN */
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10000;
+}
+
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+
+.hover_bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+    font-weight: bold;
+color: #a00;
+}
+
+.hover_bkgr_friccprintprice{
+    background:rgba(27, 24, 24, 0.92);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_friccprintprice .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+
+.hover_bkgr_friccprintprice > div {
+    background-color: #fff;
+    /* box-shadow: 10px 10px 60px #555; */
+    display: inline-block;
+    height: 92%;
+    /* max-width: 551px; */
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    /* border-radius: 8px; */
+    padding: 2% 3%;
+    font-weight: bold;
+    color: #a00;
+}
+
+.popupCloseButton {
+  background-color: #fff;
+  border: 2px solid #999;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: arial;
+  font-weight: bold;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 25px;
+  line-height: 30px;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.trigger_popup_fricc {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.buttonclass11{
+    width: 90%;
+    border: 2px solid;
+    border-style: groove;
+    height: 40px;
+    position: inherit;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 35px;
+    margin-left: 14px;
+    margin-top: 18px;
+    /*box-shadow: 6px 4px 24px rgba(0, 0, 0, 0.3), 0 0 1px rgba(0, 0, 0, 0.1) inset;*/
+}
+
+.overlaydes {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlaydes-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlaydes a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlaydes a:hover, .overlaydes a:focus {
+  color: #f1f1f1;
+}
+
+.overlaydes .closebtndes {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlaydes a {font-size: 20px}
+  .overlaydes .closebtndes {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.speech-bubble {
+    position: sticky;
+    background: #314af3;
+    border-radius: 145px / 72px;
+    width: 290px;
+    height: 145px;
+    left: 45px;
+    text-align: center;
+    margin-top: -145px;
+    color: white;
+    padding: 15px 19px;
+    display: none;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3), 0 0 1px rgba(0, 0, 0, 0.1) inset
+}
+
+.speech-bubble:after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   width: 0;
+   height: 0;
+   border: 30px solid transparent;
+   border-top-color: #314af3;
+   border-bottom: 0;
+   margin-left: -21px;
+   margin-bottom: -28px;
+}
+
+.AnimCloseButton {
+    text-shadow: 3px -1px #314af3;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -2px;
+    right: 40px;
+    font-size: 35px;
+    line-height: 30px;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+}
+
+.oval-speech {
+  position:relative;
+  width:270px;
+  padding:50px 40px;
+  margin:1em auto 50px;
+  text-align:center;
+  color:#fff;
+  background:#5a8f00;
+  /* css3 */
+  background:-webkit-gradient(linear, 0 0, 0 100%, from(#b8db29), to(#5a8f00));
+  background:-moz-linear-gradient(#b8db29, #5a8f00);
+  background:-o-linear-gradient(#b8db29, #5a8f00);
+  background:linear-gradient(#b8db29, #5a8f00);
+  /*
+  NOTES:
+  -webkit-border-radius:220px 120px; // produces oval in safari 4 and chrome 4
+  -webkit-border-radius:220px / 120px; // produces oval in chrome 4 (again!) but not supported in safari 4
+  Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+  */
+  -webkit-border-top-left-radius:220px 120px;
+  -webkit-border-top-right-radius:220px 120px;
+  -webkit-border-bottom-right-radius:220px 120px;
+  -webkit-border-bottom-left-radius:220px 120px;
+  -moz-border-radius:220px / 120px;
+  border-radius:220px / 120px;
+}
+
+.oval-speech p {font-size:1.25em;}
+
+/* creates part of the curve */
+.oval-speech:before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  bottom:-30px;
+  right:50%;
+  height:30px;
+  border-right:60px solid #5a8f00;
+  background:#5a8f00; /* need this for webkit - bug in handling of border-radius */
+  /* css3 */
+  -webkit-border-bottom-right-radius:80px 50px;
+  -moz-border-radius-bottomright:80px 50px;
+  border-bottom-right-radius:80px 50px;
+  /* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+  -webkit-transform:translate(0, -2px);
+  -moz-transform:translate(0, -2px);
+  -ms-transform:translate(0, -2px);
+  -o-transform:translate(0, -2px);
+  transform:translate(0, -2px);
+}
+
+/* creates part of the curved pointy bit */
+.oval-speech:after {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  bottom:-30px;
+  right:50%;
+  width:60px;
+  height:30px;
+  background:#fff;
+  /* css3 */
+  -webkit-border-bottom-right-radius:40px 50px;
+  -moz-border-radius-bottomright:40px 50px;
+  border-bottom-right-radius:40px 50px;
+  /* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+  -webkit-transform:translate(-30px, -2px);
+  -moz-transform:translate(-30px, -2px);
+  -ms-transform:translate(-30px, -2px);
+  -o-transform:translate(-30px, -2px);
+  transform:translate(-30px, -2px);
+}
+
+#wpfooter {
+    position: relative;
+    /* bottom: -30px; */
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    color: #555d66;
+}
