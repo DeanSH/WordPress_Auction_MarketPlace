@@ -1719,70 +1719,12 @@ if($new_auction_step == "3")
 			<div class="my_box3">
  
             
-            	<div class="box_title"><?php echo __("Map Location",'AuctionTheme'); ?></div>
+            	<div class="box_title"></div>
                 <div class="box_content">
 	
-				<div id="map" style="width: 655px; height: 300px;border:2px solid #ccc;float:left"></div>
+				<div id="map" style="width: 655px; height: 0px;border:2px solid #ccc;float:left"></div>
 				
-                <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"></script> 
-            
-            <script type="text/javascript"
-            src="<?php echo get_template_directory_uri(); ?>/js/mk.js"></script> 
-                                                <script type="text/javascript"> 
-   
-	  var geocoder;
-  var map;
-  function initialize() {
-    geocoder = new google.maps.Geocoder();
-    var latlng = new google.maps.LatLng(-34.397, 150.644);
-    var myOptions = {
-      zoom: 13,
-      center: latlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-    map = new google.maps.Map(document.getElementById("map"), myOptions);
-  }
-
-  function codeAddress(address) {
-    
-    geocoder.geocode( { 'address': address}, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-        map.setCenter(results[0].geometry.location);
-        var marker = new MarkerWithLabel({
-            
-            position: results[0].geometry.location,
-			map: map,
-       labelContent: address,
-       labelAnchor: new google.maps.Point(22, 0),
-       labelClass: "labels", // the CSS class for the label
-       labelStyle: {opacity: 1.0}
-
-        });
-      } else {
-        //alert("Geocode was not successful for the following reason: " + status);
-      }
-    });
-  }
-
-initialize();
-
-codeAddress("<?php 
-
-	$post = $post_au;
-	$pid = $post->ID;
-
-	$terms = wp_get_post_terms($pid,'auction_location');
-	foreach($terms as $term)
-	{
-		echo $term->name.",";
-	}
-
-	$location = get_post_meta($pid, "Location", true);	
-	echo $location;
-	
- ?>");
-
-    </script> 
+           
 				
 			 
 			</div>
